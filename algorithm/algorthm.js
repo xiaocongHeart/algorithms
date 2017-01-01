@@ -23,3 +23,28 @@ function fib(n) {
 }
 var a = fib(8);
 console.log(a)
+
+
+/**
+ * 冒泡排序
+ * 
+ */
+
+function bubbleSort(arr) {
+    var len = arr.length;
+    for (var i = 0; i < len; i++) {
+        for (var j = 0; j < len - i; j++) {
+            if (arr[j] > arr[j + 1]) {
+                var temp = arr[j]
+                arr[j] = arr[j + 1]
+                arr[j + 1] = temp
+            }
+        }
+    }
+    return arr
+}
+
+
+var arr = [1, 5, 9, 22, 0, 5, 3, 8, 99, 4, 15];
+
+console.log(bubbleSort(arr))
