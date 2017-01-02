@@ -67,3 +67,22 @@ function insertSort(arr) {
 }
 
 console.log("插入排序", insertSort([5, 3, 9]))
+
+
+/**
+ * 数组去重
+ */
+
+
+function oSort(arr) {
+    var len = arr.length;
+    var res = []
+
+    for (var i = 0; i < len; i++) {
+        if (res.indexOf(arr[i]) < 0) {
+            res.push(arr[i]);
+        }
+    }
+    return res
+}
+console.log(oSort([1, 2, 3, 2, 3, 1, 4, 5, 6, 5, 6, 4]))
